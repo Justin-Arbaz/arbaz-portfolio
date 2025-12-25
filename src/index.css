@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-900 text-white antialiased;
+  }
+
+  * {
+    @apply scrollbar-thin scrollbar-thumb-amber-500 scrollbar-track-gray-800;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thumb-amber-500::-webkit-scrollbar-thumb {
+    background-color: rgb(245 158 11);
+    border-radius: 4px;
+  }
+
+  .scrollbar-track-gray-800::-webkit-scrollbar-track {
+    background-color: rgb(31 41 55);
+  }
+}
