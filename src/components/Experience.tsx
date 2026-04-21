@@ -7,46 +7,46 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const experiences = [
-    {
-      icon: Briefcase,
-      title: 'Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2023 - Present',
-      description:
-        'Developed and maintained multiple web applications using MERN stack. Implemented RESTful APIs, optimized database queries, and improved application performance by 40%.',
-      achievements: [
-        'Led development of 3 major client projects',
-        'Reduced server response time by 45%',
-        'Mentored junior developers',
-      ],
-    },
-    {
-      icon: GraduationCap,
-      title: 'Web Development Intern',
-      company: 'Digital Agency',
-      period: '2022 - 2023',
-      description:
-        'Collaborated with design and development teams to build responsive web applications. Gained hands-on experience with React, Node.js, and modern development workflows.',
-      achievements: [
-        'Built 5+ client websites from scratch',
-        'Implemented responsive designs',
-        'Learned Agile methodologies',
-      ],
-    },
-    {
-      icon: Award,
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      period: '2021 - 2022',
-      description:
-        'Delivered custom web solutions for small businesses and startups. Managed full project lifecycle from requirements gathering to deployment and maintenance.',
-      achievements: [
-        'Completed 15+ freelance projects',
-        'Achieved 100% client satisfaction',
-        'Built long-term client relationships',
-      ],
-    },
-  ];
+  {
+    icon: Briefcase,
+    title: 'Frontend Developer',
+    company: 'Meadows Infotech',
+    period: '02/2025 – 04/2026',
+    description:
+      'Developed responsive web applications using React.js and Vue.js, focusing on performance, usability, and cross-browser compatibility.',
+    achievements: [
+      'Improved UI/UX for better user engagement',
+      'Optimized application performance using best practices',
+      'Collaborated with design team to build user-friendly interfaces',
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: 'Frontend Developer',
+    company: 'Bottrion PVT LTD',
+    period: '07/2024 – 01/2025',
+    description:
+      'Built dynamic web applications using HTML, CSS, and JavaScript with a strong focus on responsiveness and accessibility.',
+    achievements: [
+      'Converted design prototypes into functional web pages',
+      'Ensured mobile-first responsive design',
+      'Enhanced accessibility and user interaction',
+    ],
+  },
+  {
+    icon: Award,
+    title: 'Full Stack Projects (Practice & Freelance)',
+    company: 'Self Projects',
+    period: '2023 – Present',
+    description:
+      'Developed real-world full stack applications using MERN and Laravel, including admin panels, APIs, and responsive interfaces.',
+    achievements: [
+      'Built Job Portal (MERN stack with auth & dashboard)',
+      'Developed Sugarcane Advisory Platform (Laravel + MySQL)',
+      'Integrated REST APIs and optimized UI performance',
+    ],
+  },
+];
 
   return (
     <section id="experience" className="relative py-20 sm:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" ref={ref}>
