@@ -1,78 +1,54 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Mail } from 'lucide-react';
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+      className="min-h-screen flex items-center justify-center bg-gray-900 text-center px-6"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-3xl">
 
         {/* Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-white leading-tight"
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-bold text-white"
         >
           Frontend / Full Stack Developer
-          <br />
-          <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
-            React.js • Laravel • MySQL
-          </span>
         </motion.h1>
 
-        {/* 🔥 VALUE PROPOSITION (IMPORTANT) */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
-        >
-          I build responsive, high-performance web applications focused on clean UI,
-          scalability, and real-world problem solving.
-        </motion.p>
+        {/* Tech Stack */}
+        <p className="mt-3 text-amber-400 text-sm md:text-base">
+          React.js • Laravel • MySQL
+        </p>
 
-        {/* 🔥 TRUST LINE */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-3 text-amber-400 text-sm"
-        >
-          1.5+ Years Experience • 2 Companies • Production Projects
-        </motion.p>
+        {/* Short Description */}
+        <p className="mt-5 text-gray-300 text-base md:text-lg">
+          I build fast, responsive web applications with clean UI and scalable backend.
+        </p>
 
         {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
-        >
+        <div className="mt-8 flex justify-center gap-4">
           <button
-            onClick={() => scrollToSection('#projects')}
-            className="px-8 py-4 bg-amber-500 text-white rounded-lg font-semibold hover:scale-105 transition"
+            onClick={() => scrollToSection("#projects")}
+            className="px-6 py-3 bg-amber-500 text-white rounded-md font-medium hover:bg-amber-600 transition"
           >
-            View Projects →
+            Projects
           </button>
 
           <button
-            onClick={() => scrollToSection('#contact')}
-            className="px-8 py-4 border border-amber-500 text-amber-400 rounded-lg font-semibold hover:bg-amber-500 hover:text-white transition"
+            onClick={() => scrollToSection("#contact")}
+            className="px-6 py-3 border border-amber-500 text-amber-400 rounded-md font-medium hover:bg-amber-500 hover:text-white transition"
           >
-            Contact Me
+            Contact
           </button>
-        </motion.div>
+        </div>
 
       </div>
     </section>
