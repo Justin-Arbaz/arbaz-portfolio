@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { Code2, Rocket, TrendingUp } from 'lucide-react';
+import { Code2, Rocket, Briefcase } from 'lucide-react';
 
 const Counter = ({ end, duration, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -33,15 +33,17 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
+  // ✅ REAL STATS (no fake data)
   const stats = [
-    { icon: Code2, value: 2, suffix: '+', label: 'Years Experience' },
-    { icon: Rocket, value: 15, suffix: '+', label: 'Projects Delivered' },
-    { icon: TrendingUp, value: 95, suffix: '%', label: 'Client Satisfaction' },
+    { icon: Code2, value: 1.5, suffix: '+', label: 'Years Experience' },
+    { icon: Rocket, value: 2, suffix: '+', label: 'Major Projects' },
+    { icon: Briefcase, value: 2, suffix: '', label: 'Companies Worked' },
   ];
 
   return (
     <section id="about" ref={ref} className="relative py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,32 +58,31 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT — Content */}
+
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
+            {/* ✅ FIXED TITLE */}
             <h3 className="text-3xl font-semibold text-white">
-              MERN Stack Developer
+              Frontend / Full Stack Developer
             </h3>
 
+            {/* ✅ PREMIUM CONTENT */}
             <p className="text-gray-300 text-lg leading-relaxed">
-              I build scalable, high-performance web applications using modern
-              JavaScript technologies. My strength lies in combining clean UI
-              with robust backend architecture.
+              Frontend Developer with 1.5+ years of experience building responsive and scalable web applications using React.js, JavaScript, and Bootstrap.
             </p>
 
             <p className="text-gray-400 text-lg leading-relaxed">
-              I focus on real-world problem solving, performance optimization,
-              and maintainable code. Currently seeking full-time opportunities
-              where I can grow and contribute to impactful products.
+              Experienced in REST API integration and backend development using Laravel and MySQL. Focused on performance optimization, clean UI/UX, and solving real-world problems through efficient code.
             </p>
 
-            {/* Identity Tags */}
+            {/* ✅ UPDATED TAGS */}
             <div className="flex flex-wrap gap-3 pt-4">
-              {['MERN Stack', 'Full Stack', 'Problem Solver', 'Clean Code'].map(
+              {['React', 'Laravel', 'Full Stack', 'Problem Solver', 'Clean Code'].map(
                 (tag) => (
                   <span
                     key={tag}
@@ -94,17 +95,17 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT — Stats */}
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="grid gap-6"
           >
-            {stats.map((stat, i) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="relative p-6 rounded-2xl bg-gray-800/80 backdrop-blur border border-gray-700 hover:border-amber-500 transition"
+                className="p-6 rounded-2xl bg-gray-800/80 border border-gray-700 hover:border-amber-500 transition"
               >
                 <div className="flex items-center gap-5">
                   <div className="p-4 rounded-xl bg-amber-500/15">
@@ -126,6 +127,7 @@ const About = () => {
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
     </section>
