@@ -80,8 +80,10 @@ const Contact = () => {
             <div className="flex flex-wrap gap-4 pt-4">
               {/* Resume */}
               <a
-                href="assets/pdf/Arbazz-cv.pdf"
-                download
+                href="/pdf/Arbaz-cv.pdf"
+  download="Arbaz-cv.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl border border-amber-500 text-amber-400 hover:bg-amber-500/10 transition"
               >
                 📄 Download Resume
