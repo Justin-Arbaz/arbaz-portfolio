@@ -33,19 +33,7 @@ const Experience = () => {
       'Enhanced accessibility and user interaction',
     ],
   },
-  {
-    icon: Award,
-    title: 'Full Stack Projects (Practice & Freelance)',
-    company: 'Self Projects',
-    period: '2023 – Present',
-    description:
-      'Developed real-world full stack applications using MERN and Laravel, including admin panels, APIs, and responsive interfaces.',
-    achievements: [
-      'Built Job Portal (MERN stack with auth & dashboard)',
-      'Developed Sugarcane Advisory Platform (Laravel + MySQL)',
-      'Integrated REST APIs and optimized UI performance',
-    ],
-  },
+  
 ];
 
   return (
