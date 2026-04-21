@@ -39,7 +39,20 @@ const Contact = () => {
       href: '#',
     },
   ];
-
+const socialLinks = [
+  {
+    icon: Github,
+    link: "https://github.com/Justin-Arbaz",
+  },
+  {
+    icon: Linkedin,
+    link: "https://www.linkedin.com/in/md-arbaz-7112572b3/",
+  },
+  {
+    icon: Instagram,
+    link: "https://www.instagram.com/justin_arbaaz/",
+  },
+];
   return (
     <section id="contact" ref={ref} className="relative py-28 bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -121,16 +134,21 @@ const Contact = () => {
 
             {/* Social */}
             <div className="flex gap-4 pt-4">
-              {[Github, Linkedin, Instagram, ].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="p-4 rounded-xl border border-gray-700 hover:border-amber-500 hover:bg-amber-500/10 transition"
-                >
-                  <Icon className="text-gray-400 hover:text-amber-400" />
-                </a>
-              ))}
-            </div>
+  {socialLinks.map((item, i) => {
+    const Icon = item.icon;
+    return (
+      <a
+        key={i}
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-4 rounded-xl border border-gray-700 hover:border-amber-500 hover:bg-amber-500/10 transition"
+      >
+        <Icon className="text-gray-400 hover:text-amber-400" />
+      </a>
+    );
+  })}
+</div>
           </motion.div>
 
           {/* RIGHT — FORM */}
