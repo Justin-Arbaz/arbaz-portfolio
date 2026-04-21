@@ -4,9 +4,7 @@ import { ArrowRight, Mail } from 'lucide-react';
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -14,94 +12,68 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
     >
+      {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
 
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
-      </div>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <motion.div
+        {/* Heading */}
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 sm:space-y-8"
+          className="text-5xl md:text-7xl font-bold text-white leading-tight"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight pt-4"
-          >
-           Full Stack Developer 
-            <br />
-            <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
-              (React + Laravel)
-            </span>
-          </motion.h1>
+          Frontend / Full Stack Developer
+          <br />
+          <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            React.js • Laravel • MySQL
+          </span>
+        </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Building scalable, high-performance web applications
-            <br />
-            with modern technologies and clean architecture
-          </motion.p>
+        {/* 🔥 VALUE PROPOSITION (IMPORTANT) */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
+        >
+          I build responsive, high-performance web applications focused on clean UI,
+          scalability, and real-world problem solving.
+        </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8"
-          >
-            <button
-              onClick={() => scrollToSection('#projects')}
-              className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-lg font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/50 hover:scale-105"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                View Projects
-                <ArrowRight
-                  size={20}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </button>
-
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="group px-8 py-4 border-2 border-amber-500 text-amber-400 rounded-lg font-semibold text-lg hover:bg-amber-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105"
-            >
-              <span className="flex items-center gap-2">
-                <Mail size={20} />
-                Contact Me
-              </span>
-            </button>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
+        {/* 🔥 TRUST LINE */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          transition={{ delay: 0.6 }}
+          className="mt-3 text-amber-400 text-sm"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-amber-400 rounded-full flex justify-center p-2"
+          1.5+ Years Experience • 2 Companies • Production Projects
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
+        >
+          <button
+            onClick={() => scrollToSection('#projects')}
+            className="px-8 py-4 bg-amber-500 text-white rounded-lg font-semibold hover:scale-105 transition"
           >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-amber-400 rounded-full"
-            ></motion.div>
-          </motion.div>
+            View Projects →
+          </button>
+
+          <button
+            onClick={() => scrollToSection('#contact')}
+            className="px-8 py-4 border border-amber-500 text-amber-400 rounded-lg font-semibold hover:bg-amber-500 hover:text-white transition"
+          >
+            Contact Me
+          </button>
         </motion.div>
+
       </div>
     </section>
   );
