@@ -91,7 +91,7 @@ const Navigation = () => {
 
               {/* RESUME CTA */}
               <a
-                href="/public/assets/pdf/Arbaz-cv.pdf"
+                href="/public/pdf/Arbaz-cv.pdf"
                 download
                 className="ml-2 inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/40 transition"
               >
@@ -137,7 +137,7 @@ const Navigation = () => {
               ))}
 
               <a
-                href="/Justin-Arbaz-MERN-Developer.pdf"
+                href="/public/pdf/Arbaz-cv.pdf"
                 download
                 className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold"
               >
