@@ -34,10 +34,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight"
           >
-            MERN Stack
+           Frontend / Full Stack Developer 
             <br />
             <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
-              Developer
+              (React + Laravel)
             </span>
           </motion.h1>
 
