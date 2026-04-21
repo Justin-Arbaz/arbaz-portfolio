@@ -92,7 +92,9 @@ const Navigation = () => {
               {/* RESUME CTA */}
               <a
                 href="/pdf/Arbaz-cv.pdf"
-                download
+  download="Arbaz-cv.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/40 transition"
               >
                 <Download size={16} />
@@ -137,8 +139,10 @@ const Navigation = () => {
               ))}
 
               <a
-                href="/pdf/Arbaz-cv.pdf"
-                download
+               href="/pdf/Arbaz-cv.pdf"
+  download="Arbaz-cv.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold"
               >
                 <Download size={18} />
