@@ -41,14 +41,14 @@ const Projects = () => {
       icon: Globe,
     },
     {
-      title: 'Sugarcane Advisory Platform',
-      description:
-        'Agriculture-focused platform for crop advisory, farmer resources, and data-driven insights.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'TailwindCSS'],
-      live: 'https://caneadvisory.ac.in/',
-      gradient: 'from-pink-500 to-rose-600',
-      icon: Leaf,
-    },
+  title: 'Sugarcane Advisory Platform',
+  description:
+    'Developed an agriculture-focused platform providing crop advisory and farmer resources with dynamic content management and admin panel.',
+  tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'javascript'],
+  live: 'https://caneadvisory.ac.in/',
+  gradient: 'from-green-500 to-emerald-600',
+  icon: Leaf,
+}
   ];
 
   return (
