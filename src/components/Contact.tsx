@@ -80,7 +80,7 @@ const Contact = () => {
             <div className="flex flex-wrap gap-4 pt-4">
               {/* Resume */}
               <a
-                href="/Justin-Arbaz-MERN-Developer.pdf"
+                href="assets/pdf/Arbazz-cv.pdf"
                 download
                 className="px-6 py-3 rounded-xl border border-amber-500 text-amber-400 hover:bg-amber-500/10 transition"
               >
