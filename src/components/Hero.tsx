@@ -7,69 +7,76 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gray-900 text-white flex items-center px-6">
-      
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT CONTENT */}
-        <div>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold leading-tight"
-          >
-            Frontend Developer
-          </motion.h1>
+    <section className="relative min-h-screen flex items-center justify-center bg-gray-950 px-6 text-center overflow-hidden">
 
-          <p className="mt-4 text-amber-400 font-medium">
-            React.js • Laravel • MySQL
-          </p>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-purple-500/10 blur-3xl opacity-40"></div>
 
-          <p className="mt-6 text-gray-300 text-lg">
-            I build fast, scalable, and production-ready web apps with clean UI
-            and real-world features.
-          </p>
+      <div className="relative z-10 max-w-3xl">
 
-          <p className="mt-2 text-sm text-gray-400">
-            1.5+ Years Experience • Production Projects
-          </p>
-
-          {/* BUTTONS */}
-          <div className="mt-8 flex gap-4">
-            <button
-              onClick={() => scrollToSection('#projects')}
-              className="px-6 py-3 bg-amber-500 rounded-md hover:bg-amber-600 transition"
-            >
-              View Projects
-            </button>
-
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="px-6 py-3 border border-amber-500 text-amber-400 rounded-md hover:bg-amber-500 hover:text-white transition"
-            >
-              Contact Me
-            </button>
-          </div>
-        </div>
-
-        {/* RIGHT CONTENT (VISUAL / IMAGE / CARD) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center"
+        {/* 1️⃣ Name + Role */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-6xl font-bold text-white leading-tight"
         >
-          <div className="w-80 h-80 bg-gradient-to-br from-amber-500/20 to-amber-700/10 rounded-2xl flex items-center justify-center shadow-xl">
-            
-            {/* Replace with your image */}
-            <img
-              src="/arbaz.jpeg"
-              alt="profile"
-              className="w-64 h-64 object-cover rounded-xl border border-gray-700"
-            />
+          Hi, I'm <span className="text-amber-400">Arbaz</span> 👋 <br />
+          <span className="text-gray-300 text-2xl md:text-3xl font-medium">
+            Frontend Developer
+          </span>
+        </motion.h1>
 
-          </div>
+        {/* 2️⃣ Value Proposition (MOST IMPORTANT) */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-lg text-gray-300 leading-relaxed"
+        >
+          I build fast, scalable web applications with clean UI and real-world
+          functionality using React and Laravel.
+        </motion.p>
+
+        {/* 3️⃣ Tech Stack (Proof) */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-3 text-amber-400 text-sm font-medium tracking-wide"
+        >
+          React.js • Laravel • MySQL • REST APIs
+        </motion.p>
+
+        {/* 4️⃣ Trust Signal */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+          className="mt-2 text-sm text-gray-500"
+        >
+          1.5+ Years Experience • Production Projects
+        </motion.p>
+
+        {/* 5️⃣ CTA (Action) */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9 }}
+          className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
+        >
+          <button
+            onClick={() => scrollToSection('#projects')}
+            className="px-6 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition shadow-lg shadow-amber-500/20"
+          >
+            View Projects
+          </button>
+
+          <button
+            onClick={() => scrollToSection('#contact')}
+            className="px-6 py-3 border border-amber-500 text-amber-400 rounded-lg hover:bg-amber-500 hover:text-white transition"
+          >
+            Contact Me
+          </button>
         </motion.div>
 
       </div>
