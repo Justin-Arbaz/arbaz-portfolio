@@ -7,61 +7,72 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gray-950 px-6 text-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gray-950 text-center px-6 overflow-hidden">
 
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-purple-500/10 blur-3xl opacity-40"></div>
+      {/* 🔥 Background Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-purple-500/10 blur-3xl opacity-50"></div>
 
-      <div className="relative z-10 max-w-3xl">
+      <div className="relative z-10 max-w-4xl">
 
-        {/* 1️⃣ Name + Role */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white leading-tight"
-        >
-          Hi, I'm <span className="text-amber-400">Arbaz</span> 👋 <br />
-          <span className="text-gray-300 text-2xl md:text-3xl font-medium">
-            Frontend Developer
-          </span>
-        </motion.h1>
-
-        {/* 2️⃣ Value Proposition (MOST IMPORTANT) */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6 text-lg text-gray-300 leading-relaxed"
-        >
-          I build fast, scalable web applications with clean UI and real-world
-          functionality using React and Laravel.
-        </motion.p>
-
-        {/* 3️⃣ Tech Stack (Proof) */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-3 text-amber-400 text-sm font-medium tracking-wide"
-        >
-          React.js • Laravel • MySQL • REST APIs
-        </motion.p>
-
-        {/* 4️⃣ Trust Signal */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-2 text-sm text-gray-500"
-        >
-          1.5+ Years Experience • Production Projects
-        </motion.p>
-
-        {/* 5️⃣ CTA (Action) */}
+        {/* 🔥 Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
+          transition={{ delay: 0.2 }}
+          className="inline-block mb-4 px-4 py-1 text-sm border border-amber-500/30 text-amber-400 rounded-full"
+        >
+          Available for Work 🚀
+        </motion.div>
+
+        {/* 🔥 Title */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-bold text-white leading-tight"
+        >
+          Building Modern <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+            Web Experiences
+          </span>
+        </motion.h1>
+
+        {/* 🔥 Tech Stack */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mt-4 text-amber-400 font-medium tracking-wide"
+        >
+          React.js • Laravel • MySQL
+        </motion.p>
+
+        {/* 🔥 Description */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="mt-6 text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto"
+        >
+          I craft fast, scalable, and visually polished web apps with real-world
+          functionality and clean architecture.
+        </motion.p>
+
+        {/* 🔥 Trust Line */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mt-2 text-sm text-gray-500"
+        >
+          1.5+ Years Experience • Production-Level Projects
+        </motion.p>
+
+        {/* 🔥 Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
           className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
         >
           <button
