@@ -64,7 +64,7 @@ const Hero = () => {
             
             {/* Replace with your image */}
             <img
-              src="/profile.png"
+              src="/arbaz.jpeg"
               alt="profile"
               className="w-64 h-64 object-cover rounded-xl border border-gray-700"
             />
