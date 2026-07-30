@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -22,6 +23,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
